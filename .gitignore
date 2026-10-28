@@ -1,0 +1,44 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local browser state, logs and temporary files
+browser-profile/
+browser-profiles/
+user-data-dir/
+playwright-report/
+test-results/
+*.log
+*.tmp
+
+# Source material and private documents
+attachments/
+attachments.zip
+
+# Local copies of supplied source documents and portraits
+1000212843.jpg
+1000233638.jpg
+1000233639.jpg
+agent_execution_prompt_v2*.docx
+Automation CV.docx
+Creative_Challenge_Submission_Social_Media_AI_Automation_Specialist.docx
+GIG_Creative_Challenge_Revised_Full_Submission.docx
+Samson_Nyandika_Orina_*.docx
+Samson_Nyandika_Orina_*.pdf
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor state
+.vscode/*
+!.vscode/extensions.json
