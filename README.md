@@ -64,7 +64,7 @@ No environment variables, API keys, or third-party service accounts are required
 
 ## Deployment
 
-GitHub Actions builds and deploys the site to GitHub Pages when changes are pushed to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The project is then available at `https://<account>.github.io/ai-automation-portfolio/`. The Vite base path and favicon URL are configured for this project path.
+The live site is [https://nyandikasam1-ops.github.io/ai-automation-portfolio/](https://nyandikasam1-ops.github.io/ai-automation-portfolio/). GitHub Actions runs tests, builds the site and deploys it to GitHub Pages when changes are pushed to `main`. The Vite base path and favicon URL are configured for this project path.
 
 ## Content and limitations
 

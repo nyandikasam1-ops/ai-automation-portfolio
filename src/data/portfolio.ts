@@ -51,7 +51,7 @@ export const portfolio = {
     {
       number: "02",
       title: "Portfolio website",
-      status: "Built here · in progress",
+      status: "Built here · live",
       description:
         "This responsive portfolio is a working software project: a small React and TypeScript application that presents verified experience without treating concepts as shipped client work.",
       tags: ["React", "TypeScript", "Vite"],
