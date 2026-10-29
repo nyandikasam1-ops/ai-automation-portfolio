@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#070a13" />
+    <meta name="theme-color" content="#f5f4f0" />
     <meta
       name="description"
       content="Samson Nyandika Orina — AI quality assurance, data verification and thoughtful workflow automation."
@@ -23,12 +23,12 @@
         theme: {
           extend: {
             colors: {
-              ink: "#070a13",
-              panel: "#0d1220",
-              line: "#202a3a",
-              mist: "#99a6bb",
-              electric: "#818cf8",
-              mint: "#6ee7b7",
+              ink: "#1d2938",
+              panel: "#ffffff",
+              line: "#dce2e9",
+              mist: "#536174",
+              electric: "#315f96",
+              mint: "#315f96",
             },
             fontFamily: {
               sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
@@ -42,101 +42,27 @@
         },
       };
     </script>
-    <style>
-      :root { color-scheme: dark; }
-      html { min-width: 320px; background: #070a13; scroll-padding-top: 6rem; }
-      body {
-        min-width: 320px;
-        margin: 0;
-        background:
-          radial-gradient(ellipse at 82% 9%, rgba(79, 70, 229, .12), transparent 30rem),
-          radial-gradient(ellipse at 8% 45%, rgba(16, 185, 129, .055), transparent 34rem),
-          #070a13;
-        color: #f8fafc;
-        font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-      }
-      a { text-underline-offset: .25em; }
-      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #6ee7b7; outline-offset: 4px; }
-      .skip-link { position: fixed; z-index: 100; top: .75rem; left: .75rem; transform: translateY(-160%); }
-      .skip-link:focus { transform: translateY(0); }
-      .portrait-frame {
-        position: relative;
-        isolation: isolate;
-        overflow: hidden;
-        border: 1px solid rgba(165, 180, 252, .38);
-        background: linear-gradient(145deg, rgba(129, 140, 248, .2), rgba(16, 185, 129, .12));
-        box-shadow: 0 30px 100px rgba(79, 70, 229, .2), 0 0 0 8px rgba(129, 140, 248, .035);
-      }
-      .portrait-frame::after {
-        position: absolute;
-        z-index: 1;
-        inset: 45% 0 0;
-        background: linear-gradient(transparent, rgba(7, 10, 19, .45));
-        content: "";
-        pointer-events: none;
-      }
-      .portrait-frame img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: 50% 27%;
-      }
-      .grid-overlay {
-        background-image: linear-gradient(rgba(148, 163, 184, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, .045) 1px, transparent 1px);
-        background-size: 44px 44px;
-        mask-image: linear-gradient(#000 0%, transparent 90%);
-      }
-      .eyebrow { letter-spacing: .16em; }
-      .glass { background: linear-gradient(145deg, rgba(17, 24, 39, .82), rgba(10, 15, 27, .92)); }
-      .metric-card { background: linear-gradient(145deg, rgba(15, 23, 42, .95), rgba(10, 15, 27, .98)); }
-      .metric-card:nth-child(2) { border-top-color: rgba(129, 140, 248, .6); }
-      .metric-card:nth-child(3) { border-top-color: rgba(52, 211, 153, .55); }
-      .metric-card:nth-child(4) { border-top-color: rgba(56, 189, 248, .55); }
-      .workflow-rail { background: linear-gradient(90deg, rgba(129, 140, 248, .65), rgba(52, 211, 153, .65)); }
-      .menu-open { display: flex !important; }
-      @media (max-width: 767px) {
-        #primary-navigation {
-          position: absolute;
-          top: calc(100% + 1px);
-          right: 0;
-          left: 0;
-          display: none;
-          flex-direction: column;
-          align-items: stretch;
-          gap: .25rem;
-          padding: 1rem 1.25rem 1.25rem;
-          border-bottom: 1px solid #202a3a;
-          background: rgba(7, 10, 19, .98);
-        }
-        #primary-navigation a { padding: .8rem .5rem; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
-      }
-    </style>
+    <link rel="stylesheet" href="./public/portfolio.css" />
   </head>
   <body class="overflow-x-hidden antialiased">
     <a class="skip-link rounded-lg bg-mint px-4 py-3 font-semibold text-ink" href="#main-content">Skip to content</a>
-    <header class="sticky top-0 z-50 border-b border-white/[.07] bg-ink/85 backdrop-blur-xl">
+    <header id="site-header" class="sticky top-0 z-50 border-b border-white/[.07] bg-ink/85 backdrop-blur-xl">
       <div class="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
         <a class="flex shrink-0 items-center gap-3 no-underline" href="#home" aria-label="Samson Nyandika Orina home">
-          <span class="grid h-10 w-10 place-items-center rounded-xl border border-electric/30 bg-electric/10 font-mono text-lg font-bold text-electric">S<span class="text-mint">.</span></span>
+          <span class="brand-mark grid h-10 w-10 place-items-center rounded-xl border border-electric/30 bg-electric/10 font-mono text-lg font-bold text-electric">S<span class="brand-mark-dot text-mint">.</span></span>
           <span class="text-sm font-semibold tracking-tight text-white sm:text-base">Samson Nyandika Orina</span>
         </a>
         <button id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-xl border border-line text-slate-200 md:hidden" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
         <nav id="primary-navigation" class="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#about">About</a>
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#expertise">Core Expertise</a>
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#metrics">Proof of Work</a>
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#systems">Agent Systems</a>
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#experience">Experience</a>
-          <a class="text-sm text-slate-300 transition hover:text-white" href="#contact">Contact</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#about">About</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#expertise">Core Expertise</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#metrics">Proof of Work</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#systems">Agent Systems</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#case-studies">Case Studies</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#experience">Experience</a>
+          <a class="nav-link text-sm text-slate-300 transition hover:text-white" href="#contact">Contact</a>
           <a class="rounded-full border border-mint/35 bg-mint px-4 py-2.5 text-sm font-bold text-ink shadow-mint transition hover:bg-emerald-200" href="#contact">Available for Contracts</a>
         </nav>
       </div>
@@ -146,14 +72,14 @@
       <section id="home" class="relative isolate overflow-hidden">
         <div class="grid-overlay pointer-events-none absolute inset-0 -z-10 opacity-60"></div>
         <div class="pointer-events-none absolute -right-36 top-12 -z-10 h-96 w-96 rounded-full bg-electric/10 blur-3xl"></div>
-        <div class="mx-auto grid min-h-[690px] max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-20 lg:py-28">
+        <div class="hero-layout mx-auto grid min-h-[690px] max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-20 lg:py-28">
           <div class="max-w-3xl">
             <p class="mb-8 inline-flex items-center gap-2 rounded-full border border-mint/20 bg-mint/[.06] px-3.5 py-2 font-mono text-[11px] uppercase tracking-[.15em] text-mint">
               <span class="h-1.5 w-1.5 rounded-full bg-mint shadow-[0_0_14px_#6ee7b7]"></span>
               Kenya · Remote-first · Contract conversations welcome
             </p>
             <p class="eyebrow mb-5 font-mono text-xs uppercase text-electric">AI quality · workflow design · data operations</p>
-            <h1 class="max-w-4xl text-5xl font-semibold leading-[1.03] tracking-[-.055em] text-white sm:text-6xl lg:text-[4.65rem]">
+            <h1 class="hero-title max-w-4xl text-5xl font-semibold leading-[1.03] tracking-[-.055em] text-white sm:text-6xl lg:text-[4.65rem]">
               AI Workflow Automation Engineer <span class="text-slate-400">&amp;</span> <span class="bg-gradient-to-r from-electric via-indigo-300 to-mint bg-clip-text text-transparent">Data Quality Specialist</span>
             </h1>
             <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
@@ -170,7 +96,7 @@
               <span>AI output review</span><span>Data QA</span><span>Workflow documentation</span>
             </div>
           </div>
-          <div class="relative mx-auto w-full max-w-[410px] lg:mr-2">
+          <div class="portrait-shell relative mx-auto w-full max-w-[410px] lg:mr-2">
             <div class="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-electric/15 via-transparent to-mint/15 blur-2xl"></div>
             <figure class="portrait-frame relative aspect-[4/5] rounded-[1.65rem] p-1.5">
               <img src="./public/samson-profile.jpg" alt="Samson Nyandika Orina in a dark suit and white shirt" width="1980" height="2640" fetchpriority="high" decoding="async" />
@@ -180,7 +106,7 @@
                 <span class="mt-1 block text-sm text-slate-300">AI quality assurance · Data verification</span>
               </figcaption>
             </figure>
-            <div class="absolute -bottom-5 -left-7 hidden rounded-2xl border border-white/10 bg-panel/95 px-4 py-3 shadow-glow sm:block">
+            <div class="absolute -top-5 -left-7 hidden rounded-2xl border border-white/10 bg-panel/95 px-4 py-3 shadow-glow sm:block">
               <span class="block font-mono text-[10px] uppercase tracking-widest text-slate-500">Operating principle</span>
               <span class="mt-1 block text-sm font-medium text-slate-100">Automate the repeatable. Review the uncertain.</span>
             </div>
@@ -348,7 +274,7 @@
 
       <section id="contact" class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
         <div class="relative overflow-hidden rounded-[2rem] border border-electric/25 bg-gradient-to-br from-electric/[.12] via-panel to-mint/[.08] p-7 shadow-glow sm:p-12 lg:p-16">
-          <div class="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-electric/10 blur-3xl"></div>
+          <div class="contact-glow pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-electric/10 blur-3xl"></div>
           <div class="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div><p class="eyebrow font-mono text-xs uppercase text-mint">07 / Contact</p><h2 class="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Let’s make careful work more repeatable.</h2><p class="mt-5 max-w-2xl leading-7 text-slate-300">For contract conversations around AI quality assurance, data operations and practical workflow design, reach out by email.</p></div>
             <a class="inline-flex min-h-14 items-center justify-center gap-3 rounded-xl bg-mint px-6 font-semibold text-ink shadow-mint transition hover:-translate-y-0.5 hover:bg-emerald-200" href="mailto:snyandikasamson@gmail.com?subject=Portfolio%20contract%20enquiry">Available for Contracts <span aria-hidden="true">↗</span></a>
@@ -379,12 +305,32 @@
         menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
         navigation.classList.toggle("menu-open", !isOpen);
       });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+          navigation.classList.remove("menu-open");
+          menuButton.focus();
+        }
+      });
       navigation.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           menuButton.setAttribute("aria-expanded", "false");
           menuButton.setAttribute("aria-label", "Open navigation");
           navigation.classList.remove("menu-open");
         });
+        const sectionLinks = Array.from(navigation.querySelectorAll('a[href^="#"]')).filter((link) => document.querySelector(link.getAttribute("href")));
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver((entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (!visible) return;
+            sectionLinks.forEach((link) => {
+              if (link.hash === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+              else link.removeAttribute("aria-current");
+            });
+          }, { rootMargin: "-18% 0px -65% 0px", threshold: [0, 0.2, 0.5, 0.8] });
+          document.querySelectorAll("main section[id]").forEach((section) => observer.observe(section));
+        }
       });
       document.getElementById("copyright-year").textContent = String(new Date().getFullYear());
     </script>
