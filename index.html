@@ -1,24 +1,392 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#111312" />
+    <meta name="theme-color" content="#070a13" />
     <meta
       name="description"
-      content="Samson Nyandika Orina works across AI quality assurance, data verification and practical workflow automation."
+      content="Samson Nyandika Orina — AI quality assurance, data verification and thoughtful workflow automation."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Samson Nyandika Orina — AI Quality & Automation" />
+    <meta property="og:title" content="Samson Nyandika Orina — AI Workflow Automation" />
     <meta
       property="og:description"
-      content="A considered portfolio of AI quality assurance, data verification and practical workflow automation."
+      content="An evidence-conscious portfolio of AI quality practice, data verification and workflow design."
     />
-    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-    <title>Samson Nyandika Orina — AI Quality &amp; Automation</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="preload" as="image" href="./public/samson-profile.jpg" />
+    <title>Samson Nyandika Orina — AI Workflow Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#070a13",
+              panel: "#0d1220",
+              line: "#202a3a",
+              mist: "#99a6bb",
+              electric: "#818cf8",
+              mint: "#6ee7b7",
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
+              mono: ["ui-monospace", "SFMono-Regular", "Consolas", "monospace"],
+            },
+            boxShadow: {
+              glow: "0 0 90px rgba(99, 102, 241, .16)",
+              mint: "0 0 55px rgba(52, 211, 153, .13)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      html { min-width: 320px; background: #070a13; scroll-padding-top: 6rem; }
+      body {
+        min-width: 320px;
+        margin: 0;
+        background:
+          radial-gradient(ellipse at 82% 9%, rgba(79, 70, 229, .12), transparent 30rem),
+          radial-gradient(ellipse at 8% 45%, rgba(16, 185, 129, .055), transparent 34rem),
+          #070a13;
+        color: #f8fafc;
+        font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { text-underline-offset: .25em; }
+      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #6ee7b7; outline-offset: 4px; }
+      .skip-link { position: fixed; z-index: 100; top: .75rem; left: .75rem; transform: translateY(-160%); }
+      .skip-link:focus { transform: translateY(0); }
+      .portrait-frame {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        border: 1px solid rgba(165, 180, 252, .38);
+        background: linear-gradient(145deg, rgba(129, 140, 248, .2), rgba(16, 185, 129, .12));
+        box-shadow: 0 30px 100px rgba(79, 70, 229, .2), 0 0 0 8px rgba(129, 140, 248, .035);
+      }
+      .portrait-frame::after {
+        position: absolute;
+        z-index: 1;
+        inset: 45% 0 0;
+        background: linear-gradient(transparent, rgba(7, 10, 19, .45));
+        content: "";
+        pointer-events: none;
+      }
+      .portrait-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: 50% 27%;
+      }
+      .grid-overlay {
+        background-image: linear-gradient(rgba(148, 163, 184, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, .045) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(#000 0%, transparent 90%);
+      }
+      .eyebrow { letter-spacing: .16em; }
+      .glass { background: linear-gradient(145deg, rgba(17, 24, 39, .82), rgba(10, 15, 27, .92)); }
+      .metric-card { background: linear-gradient(145deg, rgba(15, 23, 42, .95), rgba(10, 15, 27, .98)); }
+      .metric-card:nth-child(2) { border-top-color: rgba(129, 140, 248, .6); }
+      .metric-card:nth-child(3) { border-top-color: rgba(52, 211, 153, .55); }
+      .metric-card:nth-child(4) { border-top-color: rgba(56, 189, 248, .55); }
+      .workflow-rail { background: linear-gradient(90deg, rgba(129, 140, 248, .65), rgba(52, 211, 153, .65)); }
+      .menu-open { display: flex !important; }
+      @media (max-width: 767px) {
+        #primary-navigation {
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 0;
+          left: 0;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: .25rem;
+          padding: 1rem 1.25rem 1.25rem;
+          border-bottom: 1px solid #202a3a;
+          background: rgba(7, 10, 19, .98);
+        }
+        #primary-navigation a { padding: .8rem .5rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="overflow-x-hidden antialiased">
+    <a class="skip-link rounded-lg bg-mint px-4 py-3 font-semibold text-ink" href="#main-content">Skip to content</a>
+    <header class="sticky top-0 z-50 border-b border-white/[.07] bg-ink/85 backdrop-blur-xl">
+      <div class="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+        <a class="flex shrink-0 items-center gap-3 no-underline" href="#home" aria-label="Samson Nyandika Orina home">
+          <span class="grid h-10 w-10 place-items-center rounded-xl border border-electric/30 bg-electric/10 font-mono text-lg font-bold text-electric">S<span class="text-mint">.</span></span>
+          <span class="text-sm font-semibold tracking-tight text-white sm:text-base">Samson Nyandika Orina</span>
+        </a>
+        <button id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-xl border border-line text-slate-200 md:hidden" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <nav id="primary-navigation" class="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#about">About</a>
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#expertise">Core Expertise</a>
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#metrics">Proof of Work</a>
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#systems">Agent Systems</a>
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#experience">Experience</a>
+          <a class="text-sm text-slate-300 transition hover:text-white" href="#contact">Contact</a>
+          <a class="rounded-full border border-mint/35 bg-mint px-4 py-2.5 text-sm font-bold text-ink shadow-mint transition hover:bg-emerald-200" href="#contact">Available for Contracts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="relative isolate overflow-hidden">
+        <div class="grid-overlay pointer-events-none absolute inset-0 -z-10 opacity-60"></div>
+        <div class="pointer-events-none absolute -right-36 top-12 -z-10 h-96 w-96 rounded-full bg-electric/10 blur-3xl"></div>
+        <div class="mx-auto grid min-h-[690px] max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-20 lg:py-28">
+          <div class="max-w-3xl">
+            <p class="mb-8 inline-flex items-center gap-2 rounded-full border border-mint/20 bg-mint/[.06] px-3.5 py-2 font-mono text-[11px] uppercase tracking-[.15em] text-mint">
+              <span class="h-1.5 w-1.5 rounded-full bg-mint shadow-[0_0_14px_#6ee7b7]"></span>
+              Kenya · Remote-first · Contract conversations welcome
+            </p>
+            <p class="eyebrow mb-5 font-mono text-xs uppercase text-electric">AI quality · workflow design · data operations</p>
+            <h1 class="max-w-4xl text-5xl font-semibold leading-[1.03] tracking-[-.055em] text-white sm:text-6xl lg:text-[4.65rem]">
+              AI Workflow Automation Engineer <span class="text-slate-400">&amp;</span> <span class="bg-gradient-to-r from-electric via-indigo-300 to-mint bg-clip-text text-transparent">Data Quality Specialist</span>
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+              I bring a quality-first approach to AI evaluation, structured data verification and practical automation. My toolkit includes Python and JavaScript scripting, browser-based workflows, REST/JSON integrations and clear human review checkpoints.
+            </p>
+            <p class="mt-4 max-w-2xl text-sm leading-7 text-mist">
+              I focus on work that can be explained, checked and improved: define the task, preserve its context, make the process repeatable, and surface uncertainty before it reaches a user.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mint px-5 font-semibold text-ink shadow-mint transition hover:-translate-y-0.5 hover:bg-emerald-200" href="#expertise">Explore capabilities <span aria-hidden="true">↓</span></a>
+              <a class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-700 bg-white/[.025] px-5 font-semibold text-slate-100 transition hover:border-electric/60 hover:bg-white/[.05]" href="mailto:snyandikasamson@gmail.com?subject=Portfolio%20contract%20enquiry">Discuss a contract <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/[.08] pt-5 font-mono text-[11px] uppercase tracking-[.12em] text-slate-500">
+              <span>AI output review</span><span>Data QA</span><span>Workflow documentation</span>
+            </div>
+          </div>
+          <div class="relative mx-auto w-full max-w-[410px] lg:mr-2">
+            <div class="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-electric/15 via-transparent to-mint/15 blur-2xl"></div>
+            <figure class="portrait-frame relative aspect-[4/5] rounded-[1.65rem] p-1.5">
+              <img src="./public/samson-profile.jpg" alt="Samson Nyandika Orina in a dark suit and white shirt" width="1980" height="2640" fetchpriority="high" decoding="async" />
+              <figcaption class="absolute inset-x-5 bottom-5 z-10 rounded-2xl border border-white/15 bg-ink/75 p-4 backdrop-blur-md">
+                <span class="eyebrow block font-mono text-[10px] uppercase text-mint">Quality-minded by design</span>
+                <span class="mt-2 block text-lg font-semibold text-white">Samson Nyandika Orina</span>
+                <span class="mt-1 block text-sm text-slate-300">AI quality assurance · Data verification</span>
+              </figcaption>
+            </figure>
+            <div class="absolute -bottom-5 -left-7 hidden rounded-2xl border border-white/10 bg-panel/95 px-4 py-3 shadow-glow sm:block">
+              <span class="block font-mono text-[10px] uppercase tracking-widest text-slate-500">Operating principle</span>
+              <span class="mt-1 block text-sm font-medium text-slate-100">Automate the repeatable. Review the uncertain.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-y border-white/[.07] bg-white/[.018]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-20 lg:py-20">
+          <div>
+            <p class="eyebrow font-mono text-xs uppercase text-electric">01 / About</p>
+            <h2 class="mt-5 max-w-xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Reliable automation starts with clear evidence.</h2>
+          </div>
+          <div class="space-y-5 text-[15px] leading-8 text-slate-300">
+            <p>I’m Samson, a Kenya-based remote professional working across AI quality assurance, data verification and workflow operations. I bring a careful review mindset to tasks where accuracy, consistency and traceability matter.</p>
+            <p>My approach is deliberately practical: translate instructions into checkable criteria, inspect outputs against the available evidence, record exceptions in plain language, and leave the final decision with the responsible person.</p>
+            <p>This portfolio separates CV-described professional experience from workflow designs and personal projects. No client names, confidential datasets, unpublished systems or unsubstantiated outcomes are presented as public case studies.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="mb-12 grid gap-5 md:grid-cols-[.75fr_1.25fr] md:items-end">
+          <p class="eyebrow font-mono text-xs uppercase text-electric">02 / Core expertise</p>
+          <div><h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">A considered toolkit for dependable operations.</h2><p class="mt-4 max-w-2xl leading-7 text-mist">Skills listed in supplied CV material, paired with the quality controls that make technical work maintainable and reviewable.</p></div>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="glass rounded-2xl border border-line p-6 transition hover:border-electric/40">
+            <span class="font-mono text-xs text-electric">01 / EVALUATE</span><h3 class="mt-5 text-xl font-semibold">AI quality &amp; evaluation</h3>
+            <p class="mt-3 text-sm leading-7 text-mist">Review model and conversational outputs against task requirements; note accuracy, consistency, instruction-following and issues that need escalation.</p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-300"><li>Prompt and response review</li><li>Dataset checks against guidelines</li><li>Structured error notes</li></ul>
+          </article>
+          <article class="glass rounded-2xl border border-line p-6 transition hover:border-mint/40">
+            <span class="font-mono text-xs text-mint">02 / VERIFY</span><h3 class="mt-5 text-xl font-semibold">Data quality operations</h3>
+            <p class="mt-3 text-sm leading-7 text-mist">Check structured information systematically, cross-reference where sources are available, and document decisions so work can be reviewed.</p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-300"><li>Validation and consistency checks</li><li>Excel, Google Sheets, Airtable</li><li>Repeatable review records</li></ul>
+          </article>
+          <article class="glass rounded-2xl border border-line p-6 transition hover:border-electric/40">
+            <span class="font-mono text-xs text-electric">03 / AUTOMATE</span><h3 class="mt-5 text-xl font-semibold">Scripting &amp; integrations</h3>
+            <p class="mt-3 text-sm leading-7 text-mist">Practical scripting and data exchange for reducing repetitive steps while keeping inputs, outputs and exceptions understandable.</p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-300"><li>Python and JavaScript</li><li>REST APIs and JSON</li><li>Webhooks and data hand-offs</li></ul>
+          </article>
+          <article class="glass rounded-2xl border border-line p-6 transition hover:border-mint/40">
+            <span class="font-mono text-xs text-mint">04 / OPERATE</span><h3 class="mt-5 text-xl font-semibold">Workflow discipline</h3>
+            <p class="mt-3 text-sm leading-7 text-mist">Make the process legible to the next person: capture the brief, apply agreed criteria, preserve useful context and flag what cannot be verified.</p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-300"><li>Process documentation</li><li>Browser-assisted work patterns</li><li>Human review checkpoints</li></ul>
+          </article>
+        </div>
+        <div class="mt-6 rounded-2xl border border-line bg-panel/70 p-5 text-sm leading-7 text-mist">
+          <span class="font-semibold text-slate-200">Version and platform accuracy:</span> the supplied materials list Python but do not establish a Python 3.13 runtime, production use of n8n/Make, or a double-blind Airtable implementation. Those specific claims are intentionally not represented as delivered experience.
+        </div>
+      </section>
+
+      <section id="metrics" class="border-y border-white/[.07] bg-[#0a0f1b]">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+          <div class="grid gap-6 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+            <div><p class="eyebrow font-mono text-xs uppercase text-electric">03 / Proof of work</p><h2 class="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">Operational figures, with the right context.</h2></div>
+            <p class="max-w-2xl leading-7 text-mist">The values below were supplied by the portfolio owner. They are presented as self-reported estimates—not independently audited results. No underlying session export, time-saved calculation, evaluation sample or accuracy rubric was supplied for public verification.</p>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="metric-card rounded-2xl border border-line border-t-2 border-t-mint/50 p-6">
+              <p class="font-mono text-xs uppercase tracking-widest text-mist">Agent activity</p><p class="mt-5 text-4xl font-semibold tracking-tight text-white">261<span class="text-mint">+</span></p><h3 class="mt-2 font-medium text-slate-200">Operational agent sessions</h3><p class="mt-3 text-xs leading-6 text-slate-500">Owner-reported; activity window and definition not supplied.</p>
+            </article>
+            <article class="metric-card rounded-2xl border border-line border-t-2 border-t-electric p-6">
+              <p class="font-mono text-xs uppercase tracking-widest text-mist">Tool execution</p><p class="mt-5 text-4xl font-semibold tracking-tight text-white">4,176<span class="text-electric">+</span></p><h3 class="mt-2 font-medium text-slate-200">Executed tool calls</h3><p class="mt-3 text-xs leading-6 text-slate-500">Owner-reported; no export or counting method linked.</p>
+            </article>
+            <article class="metric-card rounded-2xl border border-line border-t-2 border-t-mint p-6">
+              <p class="font-mono text-xs uppercase tracking-widest text-mist">Time &amp; throughput</p><p class="mt-5 text-4xl font-semibold tracking-tight text-white">91h <span class="text-3xl">58m</span></p><h3 class="mt-2 font-medium text-slate-200">Estimated manual time saved</h3><p class="mt-3 text-sm text-mint">73% workflow acceleration · owner-reported</p><p class="mt-2 text-xs leading-6 text-slate-500">Baseline, sample and estimation method not supplied.</p>
+            </article>
+            <article class="metric-card rounded-2xl border border-line border-t-2 border-t-sky-400 p-6">
+              <p class="font-mono text-xs uppercase tracking-widest text-mist">Dataset review</p><p class="mt-5 text-4xl font-semibold tracking-tight text-white">98<span class="text-sky-400">%+</span></p><h3 class="mt-2 font-medium text-slate-200">AI dataset QA accuracy</h3><p class="mt-3 text-xs leading-6 text-slate-500">Owner-reported; rubric, sample size and audit record not supplied.</p>
+            </article>
+          </div>
+          <p class="mt-5 text-xs leading-6 text-slate-500">For procurement or evaluation, request the supporting logs, date range, definitions and calculation method before relying on these figures. They are not represented as third-party verified.</p>
+        </div>
+      </section>
+
+      <section id="systems" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="mb-12 grid gap-5 md:grid-cols-[.75fr_1.25fr] md:items-end">
+          <p class="eyebrow font-mono text-xs uppercase text-electric">04 / Agent automation systems</p>
+          <div><h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Architecture that keeps a person in control.</h2><p class="mt-4 max-w-2xl leading-7 text-mist">These cards describe practical design patterns, not a claim that a production agent platform or client integration has been deployed.</p></div>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-[1.2fr_.8fr]">
+          <div class="glass rounded-3xl border border-line p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-3"><span class="eyebrow font-mono text-[10px] uppercase text-mint">Reference architecture / human-gated</span><span class="rounded-full border border-mint/20 bg-mint/[.06] px-3 py-1 font-mono text-[10px] text-mint">DESIGN PATTERN</span></div>
+            <div class="mt-8 grid gap-3 sm:grid-cols-2">
+              <article class="rounded-2xl border border-line bg-ink/70 p-5"><span class="font-mono text-xs text-electric">01 · INPUT</span><h3 class="mt-3 font-semibold">Brief &amp; constraints</h3><p class="mt-2 text-sm leading-6 text-mist">Define intent, permitted sources, expected format and when the system must stop.</p></article>
+              <article class="rounded-2xl border border-line bg-ink/70 p-5"><span class="font-mono text-xs text-electric">02 · ROUTE</span><h3 class="mt-3 font-semibold">Task decomposition</h3><p class="mt-2 text-sm leading-6 text-mist">Separate bounded steps, preserve context and select tools only where needed.</p></article>
+              <article class="rounded-2xl border border-line bg-ink/70 p-5"><span class="font-mono text-xs text-mint">03 · CHECK</span><h3 class="mt-3 font-semibold">Validation &amp; exceptions</h3><p class="mt-2 text-sm leading-6 text-mist">Validate required fields and evidence; route ambiguous or failed checks to a person.</p></article>
+              <article class="rounded-2xl border border-line bg-ink/70 p-5"><span class="font-mono text-xs text-mint">04 · APPROVE</span><h3 class="mt-3 font-semibold">Human decision</h3><p class="mt-2 text-sm leading-6 text-mist">Show the output alongside its sources and review notes before consequential use.</p></article>
+            </div>
+            <div class="mt-6 h-px workflow-rail"></div>
+            <div class="mt-4 flex flex-wrap justify-between gap-2 font-mono text-[10px] uppercase tracking-widest text-slate-500"><span>Traceable input</span><span>Explicit checkpoints</span><span>Reviewed output</span></div>
+          </div>
+          <aside class="flex flex-col gap-4">
+            <article class="glass rounded-2xl border border-line p-6"><p class="font-mono text-xs uppercase tracking-widest text-electric">Runtime &amp; workspace</p><h3 class="mt-3 text-xl font-semibold">Python · JavaScript · VS Code</h3><p class="mt-3 text-sm leading-7 text-mist">Scripting and structured development workflows are listed in the supplied materials. The exact Python version is not documented, so this portfolio does not claim Python 3.13 specifically.</p></article>
+            <article class="glass rounded-2xl border border-line p-6"><p class="font-mono text-xs uppercase tracking-widest text-mint">Connectivity &amp; records</p><h3 class="mt-3 text-xl font-semibold">REST · JSON · webhooks</h3><p class="mt-3 text-sm leading-7 text-mist">Common interface patterns for passing structured data between steps. Any real integration should validate inputs, handle failures visibly and avoid exposing private payloads in logs.</p></article>
+            <article class="glass rounded-2xl border border-line p-6"><p class="font-mono text-xs uppercase tracking-widest text-electric">BrowserOS &amp; orchestration</p><h3 class="mt-3 text-xl font-semibold">Bounded, reviewable actions</h3><p class="mt-3 text-sm leading-7 text-mist">Browser automation can follow a multi-step plan with state checks, clear stop conditions and human confirmation at sensitive boundaries. No production BrowserOS, n8n or Make deployment is claimed here.</p></article>
+          </aside>
+        </div>
+        <div class="mt-5 rounded-2xl border border-line bg-white/[.02] p-5 text-sm leading-7 text-mist"><span class="font-semibold text-slate-200">Data QA note:</span> spreadsheets and Airtable are listed as operational tools. A double-blind review design can reduce reviewer bias when a project has independent reviewers and an adjudication protocol; no such deployed implementation or measured result is claimed in this portfolio.</div>
+      </section>
+
+      <section id="case-studies" class="border-y border-white/[.07] bg-white/[.018]">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+          <div class="mb-12 grid gap-5 md:grid-cols-[.75fr_1.25fr] md:items-end">
+            <p class="eyebrow font-mono text-xs uppercase text-electric">05 / Workflow case studies</p>
+            <div><h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Three patterns, clearly scoped.</h2><p class="mt-4 max-w-2xl leading-7 text-mist">The CVs support AI output evaluation and data verification. The workflows below are reference designs to show how those principles could be applied—not claims of completed client deployments or measured outcomes.</p></div>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-3">
+            <article class="glass rounded-2xl border border-line p-6">
+              <span class="font-mono text-xs text-electric">REFERENCE DESIGN / A</span><h3 class="mt-5 text-xl font-semibold">Browser research pipeline</h3>
+              <p class="mt-3 text-sm leading-7 text-mist">A bounded browser-assisted workflow for collecting information from approved public sources while keeping each result linked to where it came from.</p>
+              <ol class="mt-5 space-y-3 border-l border-electric/30 pl-4 text-sm leading-6 text-slate-300"><li>1. Define the question, allowed domains and expected fields.</li><li>2. Gather only relevant page content and preserve source URLs.</li><li>3. Validate required fields and mark missing or conflicting evidence.</li><li>4. Present a compact evidence table for human review.</li></ol>
+              <p class="mt-5 rounded-xl border border-line bg-ink/70 p-3 text-xs leading-6 text-slate-500">Controls: scope limits, source traceability, no bypassing access controls, visible failure states.</p>
+            </article>
+            <article class="glass rounded-2xl border border-line p-6">
+              <span class="font-mono text-xs text-mint">REFERENCE DESIGN / B</span><h3 class="mt-5 text-xl font-semibold">Structured web data checks</h3>
+              <p class="mt-3 text-sm leading-7 text-mist">A script-assisted pattern for permitted data sources: normalize inputs, validate records and make data-quality exceptions easy to inspect.</p>
+              <ol class="mt-5 space-y-3 border-l border-mint/30 pl-4 text-sm leading-6 text-slate-300"><li>1. Use an approved API or permitted source and respect its terms.</li><li>2. Parse into a documented schema with explicit data types.</li><li>3. Flag duplicates, missing values and unexpected formats.</li><li>4. Export validated records with a review and exception summary.</li></ol>
+              <p class="mt-5 rounded-xl border border-line bg-ink/70 p-3 text-xs leading-6 text-slate-500">Controls: source permissions, rate limits, privacy minimization, deterministic validation.</p>
+            </article>
+            <article class="glass rounded-2xl border border-line p-6">
+              <span class="font-mono text-xs text-electric">REFERENCE DESIGN / C</span><h3 class="mt-5 text-xl font-semibold">LLM response evaluation</h3>
+              <p class="mt-3 text-sm leading-7 text-mist">A review framework for comparing generated answers to task-specific criteria without presenting an uncalibrated score as accuracy.</p>
+              <ol class="mt-5 space-y-3 border-l border-electric/30 pl-4 text-sm leading-6 text-slate-300"><li>1. Define criteria, source-of-truth material and error categories.</li><li>2. Review a representative sample against the same rubric.</li><li>3. Record evidence, severity, disagreement and adjudication.</li><li>4. Report sample size, confidence limits and known gaps.</li></ol>
+              <p class="mt-5 rounded-xl border border-line bg-ink/70 p-3 text-xs leading-6 text-slate-500">Controls: reviewer calibration, documented rubric, adjudication, transparent denominator.</p>
+            </article>
+          </div>
+          <div class="mt-6 rounded-2xl border border-electric/20 bg-electric/[.045] p-5 text-sm leading-7 text-slate-300"><span class="font-semibold text-white">Evidence boundary:</span> no client artifacts, public benchmark, source logs or case-study outcomes were supplied for publication. These designs are examples of a quality-first approach, not portfolio proof of a shipped system.</div>
+        </div>
+      </section>
+
+      <section id="experience" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="mb-12 grid gap-5 md:grid-cols-[.75fr_1.25fr] md:items-end">
+          <p class="eyebrow font-mono text-xs uppercase text-electric">06 / Experience &amp; education</p>
+          <div><h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Care, consistency and clear records.</h2><p class="mt-4 max-w-2xl leading-7 text-mist">Experience and study details are based on the supplied CVs; where versions conflict, the portfolio avoids stronger claims.</p></div>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_.9fr]">
+          <div class="space-y-4">
+            <article class="glass rounded-2xl border border-line p-6 sm:p-7">
+              <div class="flex flex-wrap items-start justify-between gap-4"><div><p class="font-mono text-xs uppercase tracking-widest text-mint">Jan 2024 — present · Remote / freelance</p><h3 class="mt-3 text-xl font-semibold">Lead AI Quality Assurance &amp; Model Evaluation Specialist</h3></div><span class="rounded-full border border-mint/20 px-3 py-1 font-mono text-[10px] uppercase text-mint">CV-described experience</span></div>
+              <p class="mt-4 text-sm leading-7 text-mist">Reviewing AI outputs and conversational flows, checking datasets against guidelines and documenting quality findings. The emphasis is on consistent criteria, actionable notes and reviewable decisions.</p>
+            </article>
+            <article class="glass rounded-2xl border border-line p-6 sm:p-7">
+              <p class="font-mono text-xs uppercase tracking-widest text-electric">Mar 2023 — Dec 2023 · Remote</p><h3 class="mt-3 text-xl font-semibold">Data Quality Operations &amp; Verification Specialist</h3>
+              <p class="mt-4 text-sm leading-7 text-mist">Systematic data checks, cross-referencing and process documentation for structured information, with care for consistency and clear handling of exceptions.</p>
+            </article>
+          </div>
+          <aside class="rounded-3xl border border-electric/20 bg-gradient-to-br from-electric/[.09] via-panel to-mint/[.04] p-7 sm:p-8">
+            <p class="eyebrow font-mono text-xs uppercase text-electric">Education &amp; working principles</p>
+            <h3 class="mt-5 text-2xl font-semibold">Medical Laboratory Sciences</h3>
+            <p class="mt-2 text-sm text-slate-300">Moi University · studies listed in supplied CVs</p>
+            <p class="mt-5 text-sm leading-7 text-mist">A life-sciences academic background informs a careful approach to criteria, consistency and records. The source documents describe study status differently, so no degree completion or graduation date is claimed.</p>
+            <div class="mt-7 space-y-3 border-t border-white/10 pt-6">
+              <p class="flex gap-3 text-sm leading-6 text-slate-300"><span class="text-mint">✓</span><span>Follow documented criteria and make deviations visible.</span></p>
+              <p class="flex gap-3 text-sm leading-6 text-slate-300"><span class="text-mint">✓</span><span>Keep review notes specific enough for another person to understand.</span></p>
+              <p class="flex gap-3 text-sm leading-6 text-slate-300"><span class="text-mint">✓</span><span>Pause for clarification when the evidence or instruction is insufficient.</span></p>
+            </div>
+            <p class="mt-6 rounded-xl border border-line bg-ink/45 p-4 text-xs leading-6 text-slate-500">IELTS scores differ across supplied CV versions; a score is omitted until a single verified result or certificate is provided.</p>
+          </aside>
+        </div>
+        <div class="mt-5 rounded-2xl border border-line bg-white/[.02] p-5 text-sm leading-7 text-mist"><span class="font-semibold text-slate-200">Remote contract focus:</span> open to global remote opportunities in AI quality review, data verification and documented workflow operations. Work authorization, time-zone overlap and project scope can be discussed directly.</div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
+        <div class="relative overflow-hidden rounded-[2rem] border border-electric/25 bg-gradient-to-br from-electric/[.12] via-panel to-mint/[.08] p-7 shadow-glow sm:p-12 lg:p-16">
+          <div class="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-electric/10 blur-3xl"></div>
+          <div class="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div><p class="eyebrow font-mono text-xs uppercase text-mint">07 / Contact</p><h2 class="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Let’s make careful work more repeatable.</h2><p class="mt-5 max-w-2xl leading-7 text-slate-300">For contract conversations around AI quality assurance, data operations and practical workflow design, reach out by email.</p></div>
+            <a class="inline-flex min-h-14 items-center justify-center gap-3 rounded-xl bg-mint px-6 font-semibold text-ink shadow-mint transition hover:-translate-y-0.5 hover:bg-emerald-200" href="mailto:snyandikasamson@gmail.com?subject=Portfolio%20contract%20enquiry">Available for Contracts <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="relative mt-8 inline-block break-all text-lg font-medium text-white underline decoration-electric/60 decoration-2 underline-offset-8 sm:text-xl" href="mailto:snyandikasamson@gmail.com">snyandikasamson@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/[.08] bg-ink/75">
+      <div class="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:px-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div><a class="font-semibold tracking-tight text-white no-underline" href="#home">Samson Nyandika Orina</a><p class="mt-2 text-sm text-slate-500">AI quality · thoughtful automation · Kenya</p></div>
+        <nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400" aria-label="Professional links">
+          <a class="transition hover:text-white" href="https://github.com/nyandikasam1-ops" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+          <span class="text-slate-600" aria-label="LinkedIn profile URL was not supplied">LinkedIn · URL not supplied</span>
+          <a class="transition hover:text-mint" href="mailto:snyandikasamson@gmail.com">Email Samson</a>
+        </nav>
+        <p class="border-t border-white/[.06] pt-5 text-xs text-slate-600 md:col-span-2">© <span id="copyright-year">2026</span> Samson Nyandika Orina. Portrait from a user-supplied photo; original source documents are not published. Metrics shown above are owner-reported and not independently audited.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menu-toggle");
+      const navigation = document.getElementById("primary-navigation");
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+        navigation.classList.toggle("menu-open", !isOpen);
+      });
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+          navigation.classList.remove("menu-open");
+        });
+      });
+      document.getElementById("copyright-year").textContent = String(new Date().getFullYear());
+    </script>
   </body>
 </html>

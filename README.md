@@ -1,75 +1,23 @@
-# AI Automation Portfolio
+# Samson Nyandika Orina — Portfolio
 
-A personal portfolio for Samson Nyandika Orina, focused on AI quality assurance, data verification and practical workflow automation. The site distinguishes professional experience from a working portfolio build and a proposed workflow concept; it does not claim that the concept is deployed.
+A responsive, static portfolio for AI quality assurance, data verification and workflow operations.
 
-## Features
+## Run locally
 
-- Responsive, single-page portfolio with working in-page navigation.
-- Accessible mobile navigation, visible keyboard focus and reduced-motion support.
-- Experience, skills, credentials and contact information transcribed conservatively from supplied CVs.
-- Expandable project details and an explicitly labelled conceptual workflow.
-- Email link that opens the visitor's email application; there is no nonfunctional contact form.
-- No remote fonts, analytics, tracking scripts or backend services.
-- GitHub Pages-compatible asset base path for the requested `ai-automation-portfolio` repository.
+Open `index.html` in a browser. The page has no local package manager, JavaScript framework or build step. Tailwind utility styles load through the Tailwind CDN; an internet connection is needed for those styles. The portrait and favicon are local files in `public/`.
 
-## Stack
+## Publish
 
-- React 18 and TypeScript with strict compiler options.
-- Vite for development and production builds.
-- Small inline SVG icons to keep the runtime dependency footprint lean.
-- Vitest, jsdom and Testing Library for interaction tests.
+GitHub Actions publishes the root `index.html` and the contents of `public/` to GitHub Pages on each push to `main`. The workflow copies those static files to the Pages artifact; it does not install dependencies or compile a bundle.
 
-## Project structure
+Live site: https://nyandikasam1-ops.github.io/ai-automation-portfolio/
 
-```text
-public/                 Public favicon
-src/App.tsx              Page sections and accessible navigation
-src/data/portfolio.ts    Portfolio copy and content data
-src/main.tsx             Application entry point
-src/styles.css           Design tokens, layout and responsive styles
-src/test/                Test setup and UI tests
-index.html               Metadata and application shell
-vite.config.ts           Vite and GitHub Pages configuration
-```
+## Content integrity
 
-Original CVs, source photographs, and the supplied `attachments/` directory are intentionally not used as public website assets.
-
-## Requirements
-
-- Node.js 20.19+ or 22.12+ (required by Vite 6).
-- npm.
-
-## Local development
-
-```powershell
-npm install
-npm run dev
-```
-
-Open the local URL printed by Vite, normally `http://localhost:5173/`.
-
-## Verification
-
-```powershell
-npm run typecheck
-npm test
-npm run build
-```
-
-`npm run build` performs the TypeScript project build before producing static files in `dist/`.
-
-## Configuration and contact
-
-No environment variables, API keys, or third-party service accounts are required. The contact link opens an email addressed to the address included in the supplied CV. No message is sent or retained by this site.
-
-## Deployment
-
-The live site is [https://nyandikasam1-ops.github.io/ai-automation-portfolio/](https://nyandikasam1-ops.github.io/ai-automation-portfolio/). GitHub Actions runs tests, builds the site and deploys it to GitHub Pages when changes are pushed to `main`. The Vite base path and favicon URL are configured for this project path.
-
-## Content and limitations
-
-- CV versions differ on some dates, job titles, language scores and study status. This site avoids disputed language scores and completion claims; the education entry is labelled as studies, and no completion date is implied.
-- The AI-assisted content workflow is a proposed design, not an implemented or deployed integration.
-- No source repositories or public profile URLs were supplied, so none are linked.
-- The supplied photographs were not used: none was clearly a professional portrait suitable for this site's intended presentation.
-- No license has been selected.
+- The portrait in `public/samson-profile.jpg` is an upright, optimized copy of the user-supplied `attachments/1000233639.jpg`. The supplied source attachment remains private and ignored by Git.
+- The requested activity, tool-call, time-saved and QA-accuracy numbers are displayed as **owner-reported estimates**, not independently audited measurements. Public evidence, definitions and calculation methods were not supplied.
+- Career entries and education are worded conservatively from the supplied CVs. Degree completion and IELTS score are omitted because source versions conflict.
+- Python is listed in the supplied material; Python 3.13 specifically is not verified. No production n8n/Make deployment or double-blind Airtable implementation is claimed.
+- Workflow case studies are explicitly reference designs, not client deployments or measured outcomes.
+- The GitHub profile link is included. No LinkedIn profile URL was provided, so the site does not guess one.
+- Original attachments and source documents are not published.
