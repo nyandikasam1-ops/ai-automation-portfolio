@@ -1,6 +1,6 @@
 # Samson Nyandika Orina — Portfolio
 
-A responsive, static portfolio for AI quality assurance, data verification and workflow operations.
+A responsive, static portfolio for AI output evaluation, data quality, data verification and technical operations.
 
 ## Design and structure
 
@@ -23,10 +23,10 @@ Live site: https://nyandikasam1-ops.github.io/ai-automation-portfolio/
 ## Content integrity
 
 - The portrait in `public/samson-profile.jpg` is an upright, optimized copy of the user-supplied `attachments/1000233639.jpg`. The supplied source attachment remains private and ignored by Git.
-- The requested activity, tool-call, time-saved and QA-accuracy numbers are displayed as **owner-reported estimates**, not independently audited measurements. Public evidence, definitions and calculation methods were not supplied.
-- Career entries and education are worded conservatively from the supplied CVs. Degree completion and IELTS score are omitted because source versions conflict.
+- Unsupported activity, tool-call, time-saved and QA-accuracy figures have been removed.
+- Career entries use conservative, consistent wording from the supplied CVs. Medical Laboratory Sciences is presented as in progress; no degree completion or IELTS score is claimed.
 - Python is listed in the supplied material; Python 3.13 specifically is not verified. No production n8n/Make deployment or double-blind Airtable implementation is claimed.
 - Workflow case studies are explicitly reference designs, not client deployments or measured outcomes.
-- The GitHub profile link is included. No LinkedIn profile URL was provided, so the site does not guess one.
+- GitHub and LinkedIn profile links are included.
 - There is no public résumé download in the existing site or tracked assets, so no download link was added.
 - Original attachments and source documents are not published.
